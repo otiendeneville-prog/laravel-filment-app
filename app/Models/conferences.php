@@ -37,7 +37,7 @@ class Conferences extends Model
             'id' => 'integer',
             'start_dat' => 'datetime',
             'end_date' => 'datetime',
-            'venue_id' => 'null',
+            'venue_id' => 'integer',
         ];
     }
 
