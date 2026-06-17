@@ -33,6 +33,7 @@ models:
   Talk:
     title: string
     abstract: text
+    Speaker_id: usignedInteger
 
     relationships:
       belongsTo: Speaker
