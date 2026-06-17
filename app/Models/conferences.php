@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use App\Models\Talk;
 
 
 class Conferences extends Model
@@ -21,7 +20,7 @@ class Conferences extends Model
     protected $fillable = [
         'name',
         'description',
-        'start_dat',
+        'start_date',
         'end_date',
         'status',
         'region',
@@ -37,7 +36,7 @@ class Conferences extends Model
     {
         return [
             'id' => 'integer',
-            'start_dat' => 'datetime',
+            'start_date' => 'datetime',
             'end_date' => 'datetime',
             'venue_id' => 'integer',
         ];
