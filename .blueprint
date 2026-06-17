@@ -1,0 +1,9 @@
+created:
+    - database/factories/ConferencesFactory.php
+    - database/migrations/2026_06_17_110838_create_conferences_table.php
+    - database/migrations/2026_06_17_110839_create_conferences_speakers_table.php
+    - database/migrations/2026_06_17_110840_create_conferences_talk_table.php
+    - app/Models/conferences.php
+models:
+    User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string nullable' }
+    conferences: { name: string, description: string, start_dat: datetime, end_date: datetime, status: string, region: string, venue_id: unsignedInteger, relationships: { belongsTo: venue, belongsToMany: 'Speakers,  Talk' } }

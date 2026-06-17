@@ -1,0 +1,38 @@
+models:
+   conferences:
+    name: string
+    description : string 
+    start_dat : datetime 
+    end_date : datetime
+    status: string
+    region: string
+    venue_id: unsignedInteger
+
+    relationships:
+       belongsTo: venue
+       belongsToMany : Speakers,  Talk
+
+  
+Venue:
+  name: string
+  city: string
+  country: string
+  postal_code: string
+  relationships:
+    hasMany : conferences
+
+
+    Speaker:
+      name: string
+      bio: text
+      twitter_handle: string
+      email: string
+      relationships:
+        belongsToMany: conferences
+
+Talk:
+    title: string
+    abstract: text
+    relationships:
+       belongsTo: Speaker
+       belongsToMany: conferences
